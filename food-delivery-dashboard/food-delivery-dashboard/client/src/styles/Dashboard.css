@@ -1,0 +1,290 @@
+.dashboard {
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.dashboard-cards {
+  display: flex;
+  padding: 10px 5px;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  padding: clamp(0.75rem, 0.9vw, 0.75rem)  !important; /* reduced padding */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 120px;
+  max-width: clamp(140px, 16%, 200px);
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  border: 2px solid #3b82f6;
+}
+
+.card h3 {
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.card p {
+  font-size: clamp(10px, 1.2vw, 12px);
+  font-weight: bold;
+  color: #1e40af;
+}
+
+.card-icon {
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+  color: #3b82f6;
+  margin-bottom: 0.4rem;
+}
+
+.card-growth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 1.4vw, 1.4rem);
+  margin-top: 0.4rem;
+  color: green;
+  gap: 0.25rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.icon {
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/* Icon background colors */
+.orders-icon {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+.customers-icon {
+  background-color: #fef9c3;
+  color: #ca8a04;
+}
+.inventory-icon {
+  background-color: #d1fae5;
+  color: #059669;
+}
+.revenue-icon {
+  background-color: #fce7f3;
+  color: #db2777;
+}
+.delivery-icon {
+  background-color: #ede9fe;
+  color: #7c3aed;
+}
+
+.card h3 {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-top: 0.8rem;
+}
+
+.card p {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  gap: 0.25rem;
+}
+
+.trend.up {
+  color: #16a34a;
+}
+
+.trend.down {
+  color: #dc2626;
+}
+
+/* Existing styles remain unchanged */
+
+@media (max-width: 1200px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .dashboard-cards {
+    gap: 0.4rem;
+  }
+
+  .card {
+    min-width: 100px;
+    max-width: clamp(120px, 15%, 160px);
+    padding: 0.5rem;
+  }
+
+  .card h3 {
+    font-size: 0.85rem;
+    margin-top: 0.6rem;
+  }
+
+  .card p {
+    font-size: 1.3rem;
+    margin-top: 0.2rem;
+  }
+
+  .card-icon {
+    font-size: 1.5rem;
+  }
+
+  .card-growth,
+  .trend {
+    font-size: 0.75rem;
+  }
+
+  .icon {
+    padding: 8px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard {
+    padding: 0.8rem;
+  }
+
+  .dashboard-cards {
+    gap: 0.4rem;
+  }
+
+  .card {
+    padding: 0.5rem;
+    min-width: 90px;
+    max-width: clamp(90px, 16%, 130px);
+  }
+
+  .card h3 {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .card p {
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+  }
+
+  .icon {
+    padding: 6px;
+    font-size: 1rem;
+  }
+
+  .trend {
+    font-size: 0.6rem;
+    gap: 0.2rem;
+  }
+
+  .trend svg {
+    width: 12px;
+    height: 12px;
+  }
+  .last {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .card {
+    min-width: unset;
+    max-width: 100%;
+    padding: 0.6rem;
+  }
+
+  .card h3 {
+    font-size: 0.6rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  .icon {
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+
+  .trend {
+    font-size: 0.45rem;
+    gap: 0.2rem;
+  }
+
+  .trend svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.dashboard-chart {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.chart-container h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.dashboard-chart > * {
+  flex: 1;
+  min-width: 300px;
+}
+
+.last {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+@media (max-width: 700px) {
+  .last {
+    flex-wrap: wrap;
+  }
+  .low-stock-container {
+    width: 100%;
+  }
+  .orders-container {
+    width: 100%;
+  }
+}
