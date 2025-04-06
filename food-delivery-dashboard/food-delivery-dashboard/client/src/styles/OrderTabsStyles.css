@@ -1,0 +1,242 @@
+.orders-tab {
+  padding: 2.5rem 1rem;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  font-family: 'Poppins', sans-serif;
+}
+
+.sub-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sub-tab-btn {
+  padding: 0.6rem 1.3rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background-color: #f1f5f9;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.sub-tab-btn.active {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.orders-table th, .orders-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+
+.orders-table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #111827;
+}
+
+.item-col {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.item-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.status-badge {
+  padding: 0.3rem 0.7rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.status-badge.pending {
+  background-color: #facc15; /* yellow */
+  color: #1f2937;
+}
+
+.status-badge.accepted {
+  background-color: #4ade80; /* green */
+  color: #065f46;
+}
+
+.status-badge.rejected {
+  background-color: #f87171; /* red */
+  color: #7f1d1d;
+}
+
+.status-badge.delivered {
+  background-color: #60a5fa; /* blue */
+  color: #1e3a8a;
+}
+
+
+.actions-cell .btn {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  border: none;
+}
+
+.accept-btn {
+  background-color: #22c55e;
+  color: white;
+}
+.accept-btn:hover {
+  background-color: #16a34a;
+}
+
+.reject-btn {
+  background-color: #ef4444;
+  color: white;
+}
+.reject-btn:hover {
+  background-color: #dc2626;
+}
+
+.details-btn {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+.details-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.no-orders {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .orders-table th,
+  .orders-table td {
+    padding: 0.75rem;
+    
+  }
+  .actions-cell .btn{
+    margin-right: 0.3rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 777px;
+    font-size: 0.6rem;
+  }
+  .orders-table {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .sub-tab-btn {
+    padding: 0.2rem 0.6rem;
+    border-radius: 50px;
+    font-size: 0.2rem;
+    font-weight: 500;
+    background-color: #f1f5f9;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .orders-table th,
+  .orders-table td {
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    
+  }
+  .actions-cell .btn{
+    margin-right: 0.2rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 777px;
+    font-size: 0.3rem;
+  }
+  .orders-table {
+    font-size: 0.6rem;
+  }
+  .item-col {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+  
+}
+
+
+@media (max-width: 400px) {
+  .orders-table th,
+  .orders-table td {
+    padding: 0.2rem;
+    font-size: 0.4rem;
+    
+  }
+  .actions-cell .btn{
+    margin-right: 0.2rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 777px;
+    font-size: 0.3rem;
+  }
+  .orders-table {
+    font-size: 0.6rem;
+  }
+  .item-col {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 850px) {
+  .item-col .item-img {
+    display: none;
+  }
+  .sub-tab-btn {
+    padding: 0.35rem 0.9rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    background-color: #f1f5f9;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+}
+

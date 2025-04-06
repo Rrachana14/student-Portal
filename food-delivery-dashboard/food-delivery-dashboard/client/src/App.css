@@ -1,0 +1,133 @@
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 0;   /* Or reduce value */
+  padding-top: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #0b2545;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out;
+  z-index: 800;
+  position: relative;
+  border-radius: 10px;
+}
+
+/* Hide sidebar on mobile by default */
+@media (max-width: 900px) {
+  .sidebar {
+    position: fixed;
+    height: 100%;
+    top: -12px;
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  /* display: none; */
+  position: absolute;
+  top: 39px;
+  right: -46px;
+  background: white;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.sidebar .mobile-menu-btn {
+  display: none;
+}
+
+@media (max-width: 940px) {
+  .sidebar .mobile-menu-btn {
+    display: block;
+  }
+
+  .mobile-menu-btn.shifted {
+    left: 290px;
+    top: 35px;
+  }
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: white;
+}
+
+/* Nav Buttons */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  font-weight: 500;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 8px;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.tab-button:hover {
+  background-color: #134074;
+}
+
+.tab-button.active {
+  background-color: #cce3de;
+  color: #0b2545;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Main content */
+.main-content {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  background-color: #f9fafb;
+  overflow-y: auto;
+}
+
+@media (max-width: 900px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .main-content {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  
+}
+

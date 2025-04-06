@@ -1,0 +1,291 @@
+/* General Styles */
+.order-details-layout {
+    padding: 30px;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.order-details-layout h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.order-summary-customer-summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.purchase-summary,
+.customer-summary {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 45%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.purchase-summary h3,
+.customer-summary h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.order-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.order-items-table th,
+.order-items-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.order-items-table th {
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+}
+
+.order-items-table td {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.order-totals {
+    font-size: 1.2rem;
+    margin-top: 25px;
+}
+
+.totals-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.totals-row span {
+    font-weight: normal;
+    color: #333;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #007bff;
+}
+
+.customer-summary {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 40%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.customer-summary div {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.customer-summary div strong {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.1rem;
+    flex: 1;
+}
+
+.customer-summary div span {
+    font-size: 1.1rem;
+    color: #555;
+    flex: 2;
+    text-align: right;
+}
+
+.customer-summary div i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.customer-summary div:not(:last-child) {
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 10px;
+}
+
+.customer-summary div:last-child {
+    border-bottom: none;
+}
+
+/* Updated Order Tracking Section */
+.order-tracking {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.order-tracking h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #007bff;
+}
+
+/* Styling for the order details like Tracking Number, Status, and Estimated Delivery */
+.order-tracking .order-info {
+    width: 90%;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+}
+
+.order-tracking .order-info div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.order-tracking .order-info div:last-child {
+    border-bottom: none;
+}
+
+.order-tracking .order-info div strong {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.order-tracking .order-info div span {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Styling for the stages with lines between them */
+.tracking-stages {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 30px;
+    padding: 15px;
+    position: relative;
+}
+
+/* Individual Stage Item */
+.tracking-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    position: relative;
+}
+
+.tracking-stage .stage-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid #f1f1f1;
+    background-color: #ffffff;
+    color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.tracking-stage.active .stage-circle {
+    border-color: #007bff;
+    background-color: #007bff;
+    color: white;
+}
+
+.tracking-stage.completed .stage-circle {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.tracking-stage .stage-label {
+    margin-top: 12px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.tracking-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background-color: #f1f1f1;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+
+.tracking-stage.active .tracking-line {
+    background-color: #007bff;
+}
+
+.tracking-stage.completed .tracking-line {
+    background-color: #28a745;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 1000px) {
+    .order-summary-customer-summary {
+        flex-direction: column; /* Change layout to column */
+        gap: 20px; /* Reduce gap between items */
+    }
+
+    .purchase-summary,
+    .customer-summary {
+        max-width: 100%; /* Make them take full width */
+    }
+
+    .order-totals {
+        font-size: 1rem;
+    }
+
+    .tracking-stages {
+        flex-direction: column; /* Stack tracking stages vertically */
+        align-items: center;
+        width: 100%;
+    }
+
+    .tracking-stage {
+        width: 100%; /* Make each tracking stage take full width */
+        margin-bottom: 15px; /* Space between stages */
+    }
+
+    .tracking-line {
+        width: 0%; /* Hide tracking line in mobile view */
+    }
+}

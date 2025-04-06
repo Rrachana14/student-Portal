@@ -1,0 +1,149 @@
+.top-items-box {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 16px;
+    max-width: 720px;
+    margin: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .top-items-box h2 {
+    font-family:'Arial Narrow', Arial, sans-serif;
+    color: #134074;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .top-items-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .top-item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+  }
+  
+  .top-item-row:hover {
+    background-color: #f9f9f9;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .item-rank {
+    width: 30px;
+    font-weight: 600;
+    color: #888;
+  }
+  
+  .item-img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 1rem;
+  }
+  
+  .item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .item-name {
+    font-weight: 600;
+    color: #1f2937;
+  }
+  
+  .item-price {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .item-category {
+    font-size: 13px;
+    color: #10b981;
+  }
+  
+  .item-sales {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 100px;
+    text-align: right;
+  }
+  
+  .sales-count {
+    font-weight: 600;
+    font-size: large;
+    color: #1f2937;
+  }
+  
+  .sales-percentage {
+    font-size: 13px;
+    color: #888;
+  }
+    
+
+  @media (max-width: 450px) {
+    .top-items-box {
+      padding: 0.6rem;
+      border-radius: 12px;
+    }
+  
+    .top-items-box h2 {
+      font-size: 16px;
+    }
+  
+    .top-item-row {
+      padding: 0.6rem;
+      gap: 0.4rem;
+    }
+  
+    .item-rank {
+      font-size: 12px;
+      width: auto;
+      display: none;
+    }
+  
+    .item-img {
+      width: 48px;
+      height: 48px;
+      margin: 0.5rem 0;
+    }
+  
+    .item-name {
+      font-size: 14px;
+    }
+  
+    .item-price,
+    .item-category {
+      font-size: 10px;
+    }
+  
+    .item-sales {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      min-width: 0;
+      text-align: left;
+    }
+  
+    .sales-count {
+      font-size: 14px;
+    }
+  
+    .sales-percentage {
+      font-size: 11px;
+    }
+  }
+  
